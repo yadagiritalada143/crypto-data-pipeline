@@ -62,7 +62,7 @@ With this you have a new distrited hash table network that has boostrap node on 
 ## Below are the tasks which we have performed as a part of this development
 
 
-### Part 01
+### Part 01 - Initial Setup
 - [x] Create node project
 - [x] Install all the dependencies
 - [x] Creted a server with name (rpcServer)
@@ -70,9 +70,40 @@ With this you have a new distrited hash table network that has boostrap node on 
 - [x] Implement Logic to fetch the data from coingecko API's
 - [x] Implement Logic to save the data in to DB
 
-### Part 02
+### Part 02 - Data Populating
 - [x] Write a Logic to check if the data is populating to DB correctly or not. 
 Note: For this we have implemented with name 'dbInspector.js'. Make sure to stop the server while running this file using the below command.
 ```bash
 # Command to check all the entries in DB
 node src/dbInspector.js
+```
+
+### Part 03 - Data Exposure
+- [x] Write a Logic to Data exposure.
+  - Used [Hypersawrm RPC](https://www.npmjs.com/package/@hyperswarm/rpc) to Process data
+  - RPC methods implemented as below
+    - getLatestPrices (pairs: string[])
+    - getHistoricalPrices (pairs: string[], from: number, to: number)
+- [x] Implemented a simple client demostrating for getting prices
+Note: For this we have implemented with name 'rpcClient.js'. Make sure to run the server before running this file using the below command.
+```bash
+# Up and run hyperdht in new terminal 
+hyperdht --bootstrap --host 127.0.0.1 --port 30001
+```
+
+```bash
+# Up and run Server in new terminal 
+node src/rpcServer.js
+````
+
+
+### Part 04 - Scheduling and Automation
+- [x] Implement a scheduling mechanism to run the data pipeline at regular intervals e.g. every 30s
+Note: For this we have implemented with name 'scheduler.js'. Make sure to stop the server before running this file.  Use the below command to run the scheduler.
+```bash
+# Command to run the scheduler to fetch the data
+node scheduler.js
+```
+
+- [x] Ensure the pipeline can be executed on-demand
+- [ ] Ensure the pipeline can be executed as a scheduled task
