@@ -61,5 +61,5 @@ With this you have a new distrited hash table network that has boostrap node on 
 
 ## Below are the tasks which I have performed as a part of this development
 
-[] Create node project
-[x] Install all the dependencies 
+- [ ] Create node project
+- [x] Install all the dependencies 
