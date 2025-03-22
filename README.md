@@ -59,7 +59,20 @@ hyperdht --bootstrap --host 127.0.0.1 --port 30001
 With this you have a new distrited hash table network that has boostrap node on 127.0.0.1:30001
 
 
-## Below are the tasks which I have performed as a part of this development
+## Below are the tasks which we have performed as a part of this development
 
-- [ ] Create node project
-- [x] Install all the dependencies 
+
+### Part 01
+- [x] Create node project
+- [x] Install all the dependencies
+- [x] Creted a server with name (rpcServer)
+- [x] Create a demo key for coingecko to access the API's
+- [x] Implement Logic to fetch the data from coingecko API's
+- [x] Implement Logic to save the data in to DB
+
+### Part 02
+- [x] Write a Logic to check if the data is populating to DB correctly or not. 
+Note: For this we have implemented with name 'dbInspector.js'. Make sure to stop the server while running this file using the below command.
+```bash
+# Command to check all the entries in DB
+node src/dbInspector.js
