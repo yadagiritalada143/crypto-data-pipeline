@@ -57,3 +57,9 @@ hyperdht --bootstrap --host 127.0.0.1 --port 30001
 ```
 
 With this you have a new distrited hash table network that has boostrap node on 127.0.0.1:30001
+
+
+## Below are the tasks which I have performed as a part of this development
+
+[] Create node project
+[x] Install all the dependencies 
